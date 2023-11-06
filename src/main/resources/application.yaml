@@ -1,0 +1,50 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  sql:
+    init:
+      mode: always
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:mydatabase
+    username: root
+    password: password
+  h2:
+    console:
+      enabled: true
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: INFO
+          JpaTransactionManager: DEBUG
+        transaction: INFO
+        transaction.interceptor: TRACE
+management:
+  endpoints:
+    web:
+      exposure:
+        #        include: health,prometheus
+        include: "*"
+  metrics:
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+      slo:
+        http.server.requests: 10ms, 50ms, 100ms, 200ms, 300ms, 400ms, 500ms, 600ms, 800ms
+    export:
+      prometheus:
+        enabled: true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  endpoint:
+    health:
+      show-details: always
