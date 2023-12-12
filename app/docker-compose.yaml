@@ -1,9 +1,9 @@
 version: "3.8"
 services:
   otus:
-    build: .
-    image: otus
+    build: app/
+    image: app
     ports:
-      - "80:8080"
+      - "9000:8080"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:h2:mem:mydatabase

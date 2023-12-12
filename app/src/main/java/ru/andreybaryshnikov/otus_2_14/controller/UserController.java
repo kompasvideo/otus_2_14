@@ -43,4 +43,12 @@ public class UserController {
     public void deleteUser(@PathVariable long userId) {
         userService.deleteUser(userId);
     }
+
+    @GetMapping("/users/me")
+    @Operation(summary = "получить данные о пользователе", description = "получить данные о пользователе")
+    public User getUsersMe(@PathVariable long userId) {
+        return userService.getUser(userId);
+    }
+
+
 }

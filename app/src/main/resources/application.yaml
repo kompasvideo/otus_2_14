@@ -10,13 +10,10 @@ spring:
       hibernate:
         format_sql: true
   datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:mydatabase
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/shareIt
     username: root
     password: password
-  h2:
-    console:
-      enabled: true
 logging:
   level:
     org:
