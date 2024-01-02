@@ -1,0 +1,13 @@
+minikube start
+minikube addons  enable ingress
+minikube dashboard
+kubectl create ns auth
+kubectl config set-context --current --namespace=auth
+cd "C:\My\Обучение\Otus\MicrosArchit\02\14 Backend for frontends. Apigateway\Examples\otus_auth"
+
+docker build -t otus214-auth .
+docker tag otus214-auth andrey1andrey/otus214-auth
+docker push andrey1andrey/otus214-auth
+
+helm install chart2 chart/ --values chart/auth-values.yaml
+kubectl apply -f auth-ingress.yaml
