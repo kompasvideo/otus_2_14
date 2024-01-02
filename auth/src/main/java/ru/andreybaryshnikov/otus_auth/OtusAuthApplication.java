@@ -1,16 +1,16 @@
-package ru.andreybaryshnikov.otus_2_14;
+package ru.andreybaryshnikov.otus_auth;
 
-import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 
 @SpringBootApplication
-public class Application {
+public class OtusAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(OtusAuthApplication.class, args);
     }
 
     @Bean
