@@ -8,6 +8,7 @@
 
 ```
 minikube addons  enable ingress
+minikube tunnel
 ```
 
 Создаем и делаем дефолтным неймспейс auth
