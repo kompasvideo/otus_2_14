@@ -72,9 +72,7 @@ kubectl apply -f app-ingress.yaml
 После настройки
 Запускаем тесты с помощью newman и проверяем, что все корректно запустилось. 
 
-```
 ![postman_1](./README.assets/postman_1.png)
 ![postman_2](./README.assets/postman_2.png)
 ![postman_3](./README.assets/postman_3.png)
 ![postman_4](./README.assets/postman_4.png)
-```
